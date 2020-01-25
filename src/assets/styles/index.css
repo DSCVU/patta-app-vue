@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
+@tailwind base;
+@tailwind components;
+.form-group label {
+  @apply block mb-2 font-bold text-gray-800 tracking-wide text-lg;
+}
+.form-group input {
+  @apply shadow border rounded w-full px-2 py-2 tracking-wide text-lg mb-3;
+}
+.form-group input:focus {
+  @apply outline-none shadow-outline;
+}
+.btn {
+  @apply shadow px-4 py-2 rounded tracking-wide font-semibold;
+}
+.btn-primary {
+  @apply bg-blue-700 text-gray-200;
+}
+.btn-primary:hover {
+  @apply bg-blue-600;
+}
+.btn-block {
+  @apply w-full text-lg;
+}
+@tailwind utilities;
