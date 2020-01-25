@@ -10,6 +10,8 @@ Patta is a 10-digit Building Entrance geo-address assigned by DSC VU. This numbe
 
 - VueJS 2.x
 - NodeJS
+- Tailwind CSS
+- FontAwesome Solid SVGs
 - Axios for Ajax Calls
 - JWT User Auth
 - Swagger REST API Docs available at [Docs](https://patta-api.dscvu.com/rest/docs)
