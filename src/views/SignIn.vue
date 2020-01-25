@@ -6,23 +6,8 @@
           Sign In
         </h1>
         <form action="#" class="mt-5">
-          <div
-            class="bg-red-300 rounded px-3 py-3 font-semibold mb-5 leading-tight"
-          >
-            <font-awesome-icon
-              icon="times"
-              class="float-right text-gray-700"
-            ></font-awesome-icon>
-            <p class="font-bold pl-3 underline">Errors</p>
-            <ul class="list-disc pl-3">
-              <li>
-                Email is not a valid. Please provide valid Email to continue.
-              </li>
-              <li>
-                Password must be 6 to 72 characters must contain a number.
-              </li>
-            </ul>
-          </div>
+          <error-alert :errors="errors" class=""></error-alert>
+          <success-alert :message="message" class=""></success-alert>
           <div class="form-group">
             <label for="email">
               Email
@@ -71,3 +56,22 @@
     </div>
   </div>
 </template>
+
+<script>
+import ErrorAlert from "@/components/ErrorAlert.vue";
+import SuccessAlert from "@/components/SuccessAlert.vue";
+
+export default {
+  name: "SignIn",
+  components: {
+    "error-alert": ErrorAlert,
+    "success-alert": SuccessAlert
+  },
+  data: function() {
+    return {
+      errors: [],
+      message: ""
+    };
+  }
+};
+</script>

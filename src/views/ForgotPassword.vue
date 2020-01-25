@@ -10,18 +10,8 @@
           will send you instructions to reset your password.
         </p>
         <form action="#" class="mt-5">
-          <div
-            class="bg-green-300 rounded px-3 py-3 font-semibold mb-5 leading-tight"
-          >
-            <font-awesome-icon
-              icon="times"
-              class="float-right text-gray-700"
-            ></font-awesome-icon>
-            <p class="font-bold pl-3 underline">Success</p>
-            <div class="pl-3">
-              An Email is on the way with instructions to reset your password.
-            </div>
-          </div>
+          <error-alert :errors="errors" class=""></error-alert>
+          <success-alert :message="message" class=""></success-alert>
           <div class="form-group">
             <label for="email">
               Email
@@ -52,3 +42,22 @@
     </div>
   </div>
 </template>
+
+<script>
+import ErrorAlert from "@/components/ErrorAlert.vue";
+import SuccessAlert from "@/components/SuccessAlert.vue";
+
+export default {
+  name: "ForgotPasword",
+  components: {
+    "error-alert": ErrorAlert,
+    "success-alert": SuccessAlert
+  },
+  data: function() {
+    return {
+      errors: [],
+      message: ""
+    };
+  }
+};
+</script>

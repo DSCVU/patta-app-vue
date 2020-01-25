@@ -6,6 +6,8 @@
           Reset Password
         </h1>
         <form action="#" class="mt-5">
+          <error-alert :errors="errors" class=""></error-alert>
+          <success-alert :message="message" class=""></success-alert>
           <div
             class="bg-red-300 rounded px-3 py-3 font-semibold mb-5 leading-tight"
           >
@@ -64,3 +66,22 @@
     </div>
   </div>
 </template>
+
+<script>
+import ErrorAlert from "@/components/ErrorAlert.vue";
+import SuccessAlert from "@/components/SuccessAlert.vue";
+
+export default {
+  name: "ResetPassword",
+  components: {
+    "error-alert": ErrorAlert,
+    "success-alert": SuccessAlert
+  },
+  data: function() {
+    return {
+      errors: [],
+      message: ""
+    };
+  }
+};
+</script>
